@@ -148,11 +148,11 @@ class HoneyBee:
         elif self.mode == -1:
             
             if int( abs(self.x - self.hiveX) ) < 3 and int( abs(self.y - self.hiveY) ) < 3:
-                self.Returned()
+                self.Returned()    # what is the significance of 3 here?
                 
             else:
-                cons = -.3/sqrt( (self.x - self.hiveX)**2 + (self.y - self.hiveY)**2 )
-                self.x += cons*scale*(self.x - self.hiveX)
+                cons = -.3/sqrt( (self.x - self.hiveX)**2 + (self.y - self.hiveY)**2 ) # What is significance of .3?
+                self.x += cons*scale*(self.x - self.hiveX) # So this moves the bee towards the hive with a speed of .9?
                 self.y += cons*scale*(self.y - self.hiveY)
 
         ## Dancing, dancing, she's a dancing machine...
@@ -208,7 +208,7 @@ class HoneyBee:
     ### Dynamics when returning to the hive
     ###
     
-    def exploiterReturned___OLD(self):
+    def exploiterReturned___OLD(self):    # is this function no longer used?
         """*** NAME SHOULD BE REPLACED BY RECRUITRETURNED ***
         """
 
@@ -232,7 +232,7 @@ class HoneyBee:
 
 
 
-    def exploiterReturned(self):
+    def exploiterReturned(self):   
         """*** NAME SHOULD BE REPLACED BY RECRUITRETURNED ***
         """
         
