@@ -6,6 +6,7 @@ from math import *
 class HoneyBee:
     """
     mode:
+    -3 = Returning to previously visited spot
     -2 = Dancing, dacing...
     -1 = Explorer returning to hive
      0 = Exploring
