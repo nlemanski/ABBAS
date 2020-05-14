@@ -32,8 +32,8 @@ perst_vals = [1,3,5,7,10,13,16,20] # different persistence values considered
 #perst_vals = [16]
 
 # Setting save locations
-log_path = 'D:/natal/D_Documents/Multiscale_Model_Honeybee_Learning/ABBAS-master/model_output/Logs/'
-plot_path = 'D:/natal/D_Documents/Multiscale_Model_Honeybee_Learning/ABBAS-master/model_output/Plots/resource_areas/diverse/'
+log_path = 'nlemanski/ABBAS/resource_distribution/model_output/Logs/'
+plot_path = 'nlemanski/ABBAS/resource_distribution/model_output/Plots/resource_areas/diverse/'
 
 # Describing the resource distribution
 resource_type = 'Diverse'
