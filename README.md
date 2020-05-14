@@ -19,11 +19,12 @@ schedule batches of simulations.
 
 [![Animated gif from the video](https://raw.githubusercontent.com/VandroiyLabs/ABBAS/master/documentation/ODD/video.gif)](https://www.youtube.com/watch?v=_hZGlT_luLI)
 
-The current version of this software (v1.0) was used in a [recent
+This software (v1.0) was used in a [recent
 paper](https://github.com/VandroiyLabs/ABBAS#relevant-papers) was used to study
 the joint impact of task allocation and behavioral persistence on collective
 behavior.
 
+We have now expanded on this software (v2.0) to examine how the spatial distribution of resources influences the collective ability to choose among different quality resource patches. A preprint of this paper is available on [BioRxiv ](https://www.biorxiv.org/content/10.1101/817270v1).
 
 #### We also [provide here](https://github.com/VandroiyLabs/ABBAS/tree/master/documentation/ODD) a description of our model using the Overview, Design concepts, and Details (ODD) protocol.
 
@@ -32,7 +33,9 @@ behavior.
 
 ## Relevant publications
 
-If you find this useful, please [star this repository](https://github.com/thmosqueiro/ABBAS/stargazers) and/or cite our paper:
+If you find this useful, please [star this repository](https://github.com/thmosqueiro/ABBAS/stargazers) and/or cite our papers:
+
+* Lemanski, Cook, Ozturk, Smith, and Pinter-Wollman **The effect of individual learning on collective foraging in honey bees in complex environments.** [BioRxiv (2019). DOI: 10.1101/817270](https://www.biorxiv.org/content/10.1101/817270v1)
 
 * Mosqueiro, Cook, Huerta, Gadau, Smith, Pinter-Wollman **Task allocation and site fidelity jointly influence foraging regulation in honeybee colonies.** [Royal Society Open Science 4:170344 (2017). DOI: 10.1098/rsos.170344](http://rsos.royalsocietypublishing.org/content/4/8/170344) (there was a [preprint](https://www.researchgate.net/publication/315096594_Task_allocation_and_site_fidelity_jointly_influence_foraging_regulation_in_honey_bee_colonies) available too).
 
