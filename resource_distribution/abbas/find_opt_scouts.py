@@ -3,7 +3,7 @@
 Created on Thu Aug 30 15:01:01 2018, edited 9/8/18
 Analyze abbas model output
 Find optimal scouting ratio for different patchiness and persistence values, plot and save to files
-@author: natal
+@author: natalie
 """
 
 import matplotlib
@@ -12,8 +12,8 @@ import numpy as np
 import pylab as pl
 
 # filepaths
-path = 'E:/abbas/model_output/resource_distribution/Summaries/'
-figpath = 'D:/natal/D_Documents/Multiscale_Model_Honeybee_Learning/ABBAS-master/model_output/Plots/optimal_scout_ratio/'
+path = 'abbas/model_output/resource_distribution/Summaries/'
+figpath = 'abbas/model_output/Plots/optimal_scout_ratio/'
 
 # parameters
 resource_type = 'Patchy'
