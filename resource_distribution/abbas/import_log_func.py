@@ -43,8 +43,8 @@ def import_log_summary(path,outpath,resource_type,num_patches,num_scouts,prst,nu
     return #data_mean, data_std
 
 # Inputs to the function 
-path = 'E:/abbas/model_output/resource_distribution/Logs/'
-outpath = 'E:/abbas/model_output/resource_distribution/Summaries/'
+path = 'abbas/model_output/resource_distribution/Logs/'
+outpath = 'abbas/model_output/resource_distribution/Summaries/'
 resource_type = 'Patchy'
 simulation_time = 10000
 num_repetitions = 100
@@ -61,39 +61,6 @@ for patch in range(len(patch_nums)):
         for pv in range(len(perst_vals)):
             prst = perst_vals[pv]
             import_log_summary(path,outpath,resource_type,num_patches,num_scouts,prst,num_repetitions,simulation_time)
-
-
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 def import_log_output(path,resource_type,num_scouts,num_repetitions,simulation_time):
