@@ -2,10 +2,10 @@
 """
 Created on Mon Oct  1 15:46:51 2018, edited 11.21.2018
 
-Create and use functions to import and summarize log files for Diverse dispersed and Diverse clumped resource 
-distributions.
+Create and use functions to import and summarize log files for ABBAS model with different quality resources. Imports dispersed and 
+clumped resource distributions.
 
-@author: natal
+@author: Natalie
 """
 import numpy as np
 import sys
@@ -82,22 +82,22 @@ def net_food(data):
 ### Use functions to import and summarize log files ###
 
 # filepath where logs stored
-path = 'E:/abbas/model_output/diversity/Logs/'
+path = 'ABBAS/model_output/diversity/Logs/'
 # filepath for results averaged across all reps to be stored
-outpath = 'E:/abbas/model_output/diversity/Summaries/'
-#filepath for processed results to be stored on computer
-sumpath = 'D:/natal/D_Documents/Multiscale_Model_Honeybee_Learning/ABBAS-master/model_output/Results/'
+outpath = 'ABBAS/model_output/diversity/Summaries/'
+#filepath for processed results to be stored
+sumpath = 'ABBAS/model_output/Results/'
 
 # simulation parameters
 simulation_time = 21000
 num_repetitions = 150
 scout_nums = range(10,100,10)
-#perst_vals = [1,3,5,7,10,13,16,20]
-perst_vals = [10,20]
+perst_vals = [1,3,5,7,10,13,16,20]
+# perst_vals = [10,20] # used in published model
 
-# set up empty arrays and name resource type
-resource_type = 'Diverse' # dispersed resources
-extra = "RPQ"
+# set up empty arrays and define type of resource distribution being modeled
+resource_type = 'Diverse' # dispersed resource patches with variable quality
+extra = "RPQ"  # probability of recruitment proportional to resource quality
 tfood_dispersed = np.zeros((num_repetitions,len(scout_nums),len(perst_vals))) # total food collected, all reps
 tfood_dis_m = np.zeros((len(scout_nums),len(perst_vals)))
 tfood_dis_sd = np.zeros((len(scout_nums),len(perst_vals)))
@@ -144,8 +144,8 @@ for perst in perst_vals:
 print('Import complete- dispersed')
 
 # set up empty arrays and name resource type
-resource_type = 'DiverseClumped' # clumped resources
-extra = "RPQ"
+resource_type = 'DiverseClumped' # variable quality resource patches, clumped distribution
+extra = "RPQ"  # recruitment proportional to resource quality
 tfood_clumped = np.zeros((num_repetitions,len(scout_nums),len(perst_vals))) # total food collected, all reps
 tfood_clu_m = np.zeros((len(scout_nums),len(perst_vals)))
 tfood_clu_sd = np.zeros((len(scout_nums),len(perst_vals)))
