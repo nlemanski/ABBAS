@@ -19,7 +19,7 @@ import math
 ### This assumes code import_diversity.py has run to import files ###
 
 # filepath where plots stored
-figpath = 'D:/natal/D_Documents/Multiscale_Model_Honeybee_Learning/ABBAS-master/model_output/Plots/'
+figpath = 'ABBAS/model_output/Plots/'
 
 # Parameters
 nr = num_repetitions
@@ -90,7 +90,7 @@ plt.show()
 figname = 'total_food_diversity_rpq_ebar.png'
 plt.savefig(figpath+figname, dpi=400, format='png')
 
-#plot total food collected as function of scout # for different persistence levels
+# plot total food collected as function of scout number for different persistence levels
 # show mean and standard error across reps
 nr = num_repetitions
 plot1 = plt.subplot(1,2,1)
@@ -112,7 +112,7 @@ plt.show()
 figname = 'total_food_diversity_rpq_se.png'
 plt.savefig(figpath+figname, dpi=400, format='png')
 
-#plot net food collected as function of scout # for different persistence levels
+# plot net food collected as function of scout number for different persistence levels
 # plot mean and sd across reps
 plot2 = plt.subplot(1,2,1)
 for j in range(len(perst_vals)):
@@ -133,7 +133,7 @@ plt.show()
 figname = 'net_food_diversity_rpq_ebar.png'
 plt.savefig(figpath+figname, dpi=400, format='png')
 
-#plot net food collected as function of scout # for different persistence levels
+# plot net food collected as function of scout # for different persistence levels
 # plot mean and se across reps
 nr = num_repetitions
 plot2 = plt.subplot(1,2,1)
@@ -181,7 +181,7 @@ plt.show()
 figname = 'heat_scoutnum_persistence_rpq.png'
 plt.savefig(figpath+figname, dpi=400, format='png')
 
-### plot net food collected as fcn of scout number with subset of persistence values ###
+### plot net food collected as function  of scout number with subset of persistence values ###
 # plot mean and standard errors
 nr=num_repetitions 
 plot3 = plt.subplot(1,2,1)
@@ -207,7 +207,6 @@ plt.savefig(figpath+figname, dpi=400, format='png')
 # persistence = 20
 plot4 = plt.figure()
 ax4 = plot4.add_subplot(111)
-#for j in [0,4,7]:
 #ax4.errorbar(scout_nums, nfood_dis_m[:,0], yerr=(nfood_dis_sd[:,0]/math.sqrt(nr)),color='cornflowerblue', 
 #             linestyle='--', label='Dispersed-Perst 1')
 #ax4.errorbar(scout_nums, nfood_dis_m[:,4], yerr=(nfood_dis_sd[:,4]/math.sqrt(nr)),color='blue', 
@@ -220,12 +219,10 @@ ax4.errorbar(scout_nums, nfood_dis_m[:,1], yerr=(nfood_dis_sd[:,1]/math.sqrt(nr)
 #             label='Clumped-Perst 10')
 ax4.errorbar(scout_nums, nfood_clu_m[:,1], yerr=(nfood_clu_sd[:,1]/math.sqrt(nr)),color='red', 
              label='Resources Clumped')
-#plt.ylim([0,5000])
+
 plt.xlabel('% Scouts')
 plt.ylabel('Net Food Collected (microL)')
-#plt.title('Food Collected as Function of Scout Number')
 plt.legend()
-#figname = 'net_food_diversity_rpq_subset2.png'
 figname = 'net_food_optimalscouts_prst20.png'
 plt.savefig(figpath+figname, dpi=400, format='png')
 
@@ -253,7 +250,6 @@ plt.errorbar(hours,foods_med,yerr=errors_med,ecolor='0.9',color='red',linestyle=
 plt.errorbar(hours,foods_high,yerr=errors_high,ecolor='0.9',color='darkred',linestyle=':')
 plt.ylim([0,5])
 plt.xticks([])
-#plt.xlabel('Time (hours)')
 plt.legend(['Persistence = 1','Persistence = 10','Persistence = 20'])
 plt.title('10% Scouts')
 
@@ -273,7 +269,6 @@ plt.errorbar(hours,foods_high,yerr=errors_high,ecolor='0.9',color='darkred',line
 plt.ylim([0,5])
 plt.xticks([])
 plt.ylabel('Food collected (mL)')
-#plt.xlabel('Time (hours)')
 plt.title('50% Scouts')
 
 # Food dispersed, 90% scouts
@@ -314,8 +309,6 @@ plt.errorbar(hours,foods_low,yerr=errors_low,ecolor='0.9',color='cornflowerblue'
 plt.errorbar(hours,foods_med,yerr=errors_med,ecolor='0.9',color='blue',linestyle='--')
 plt.errorbar(hours,foods_high,yerr=errors_high,ecolor='0.9',color='navy',linestyle=':')
 plt.ylim([0,5])
-#plt.ylabel('Food collected (mL)')
-#plt.xlabel('Time (hours)')
 plt.xticks([])
 plt.title('10% Scouts')
 plt.legend(['Persistence = 1','Persistence = 10','Persistence = 20'],loc=2)
@@ -336,7 +329,6 @@ plt.errorbar(hours,foods_high,yerr=errors_high,ecolor='0.9',color='navy',linesty
 plt.ylim([0,5])
 plt.ylabel('Food collected (mL)')
 plt.xticks([])
-#plt.xlabel('Time (hours)')
 plt.title('\n50% Scouts')
 
 # 90% scouts
@@ -353,8 +345,6 @@ plt.errorbar(hours,foods_low,yerr=errors_low,ecolor='0.9',color='cornflowerblue'
 plt.errorbar(hours,foods_med,yerr=errors_med,ecolor='0.9',color='blue',linestyle='--')
 plt.errorbar(hours,foods_high,yerr=errors_high,ecolor='0.9',color='navy',linestyle=':')
 plt.ylim([0,5])
-#plt.yticks([])
-#plt.ylabel('Food collected (mL)')
 plt.xlabel('Time (hours)')
 plt.title('\n90% Scouts')
 
@@ -409,10 +399,8 @@ for bplot in (p1, p2):
 ax.set_xticks(ind + bwidth / 2)
 ax.set_xlim([-.3,1.65])
 ax.set_xticklabels((LI))
-#ax.set_ylim([0,5500])
 ax.set_ylabel('Total Food Collected (microL)')
 ax.legend([p1["boxes"][0], p2["boxes"][0]], ['Clumped', 'Dispersed'], loc='upper right')
-#ax.set_title('Total Food Collected by Scout Number')
 plt.show()
 figname='Fig2_food_collected_hilo_cludis_pers20.png'
 plt.savefig(figpath+figname, dpi=500,format='png')
@@ -495,17 +483,7 @@ ax[1].set_xlabel('Feeder Quality')
 ax[1].set_title('70% Scouts')
 ax[1].legend([bplot2a["boxes"][0], bplot2b["boxes"][0]], ['Clumped', 'Dispersed'], loc='upper right')
 
-#alphas = [.5,.7,1]
-#for bplot in (bplot1a, bplot2a):
-#    plt.setp(bplot['medians'],color='k')
-#    for patch, alpha in zip(bplot['boxes'], alphas):
-#        patch.set_facecolor((1,0,0,alpha))
-#colorsdispersed = ['cornflowerblue','blue','darkblue']
-#for bplot in (bplot1b, bplot2b):
-#    plt.setp(bplot['medians'],color='k')
-#    for patch, alpha in zip(bplot['boxes'], alphas):
-#        patch.set_facecolor((0,0,1,alpha))
-
+# colormap for figure
 reds =  [(1,.671,.671),
          (.824,0,0),
          (.706,0,0)]
