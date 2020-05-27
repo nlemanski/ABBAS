@@ -15,7 +15,7 @@ try:
 except:
     print('To use this script, you must first import log files')    
 #
-figpath = 'D:/natal/D_Documents/Multiscale_Model_Honeybee_Learning/ABBAS-master/model_output/Plots/'
+figpath = 'abbas/model_output/Plots/'
 folder = 'violin/'
 
 # violin plot
