@@ -12,7 +12,7 @@ from math import *
 class HoneyBee:
     """
     mode:
-    -3 = This mode appears to mean returning to previously visited spot  
+    -3 = Returning to previously visited spot  
     -2 = Dancing, dancing...
     -1 = Explorer returning to hive
      0 = Exploring
@@ -215,33 +215,8 @@ class HoneyBee:
     ### Dynamics when returning to the hive
     ###
     
-    def exploiterReturned___OLD(self):
-        """*** NAME SHOULD BE REPLACED BY RECRUIT RETURNED ***
-        """
-
-        self.returnCount += 1
-        
-        if self.returnCount == self.persistence:
-            self.mode = 1                           ## back to state Waiting for recruitments
-            self.update = self.Recruitment          ## Available back to recruitment
-            self.returnCount = 0
-            
-        else:
-            self.mode = 0
-            
-        ## Undoing any modication
-        self.x = self.hiveX
-        self.y = self.hiveY
-        self.updatePos = self.exploiterWalk
-        
-        #self.Hive.addFood()
-        return
-
-
 
     def exploiterReturned(self):
-        """*** NAME SHOULD BE REPLACED BY RECRUITRETURNED ***
-        """
         
         if self.returnCount == self.persistence:    # if number of returns so far is equal to bee's persistence, it is done exploiting that spot now
             self.mode = 1                           ## back to state Waiting for recruitments
@@ -278,8 +253,6 @@ class HoneyBee:
 
     
     def explorerReturned(self):
-        """*** NAME SHOULD BE REPLACED BY SCOUTRETURNED ***
-        """
         
         if self.returnCount == self.persistence:
             self.leaveHive( mode = 0 )  # back to exploring for new spots
@@ -316,8 +289,7 @@ class HoneyBee:
         """This function sets a scout to start foraging, with a new drifting
         vector.
         
-        Future: expand it for recruits as well.
-        
+       
         """
         
         self.mode = mode             ## back to state Waiting for recruitments
@@ -346,7 +318,7 @@ class HoneyBee:
             self.updatePos = self.exploiterWalk # moving in direction of known resource
             
             # Setting the target
-            U = self.spot    # coordinate of last known spot?
+            U = self.spot    # coordinate of last known spot
             self.recruitedSpot = np.array( U )
             u = np.array( U ) - np.array([self.hiveX,self.hiveY])
 
