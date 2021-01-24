@@ -30,7 +30,6 @@ class HoneyBee:
     #recrutableBees = 0               # Number of bees that can be recruited
 
     Krecruitment = 0.1                # average recruitment per dancing bee per dt
-    ### IT WAS 0.05 BEFORE...
     # Average number of recruited bee per dance: timeWagDance x Krecruitment / recrutables
     
     
@@ -158,8 +157,8 @@ class HoneyBee:
                 self.Returned() # bee is back in hive now
                 
             else:
-                cons = -.3/sqrt( (self.x - self.hiveX)**2 + (self.y - self.hiveY)**2 ) # dist from bee to hive but why the .3?
-                self.x += cons*scale*(self.x - self.hiveX) # move in direction of hive with speed of .9?
+                cons = -.3/sqrt( (self.x - self.hiveX)**2 + (self.y - self.hiveY)**2 ) # dist from bee to hive
+                self.x += cons*scale*(self.x - self.hiveX) # move in direction of hive with speed of .9
                 self.y += cons*scale*(self.y - self.hiveY)
 
         ## Dancing, dancing, she's a dancing machine...
