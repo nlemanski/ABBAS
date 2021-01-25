@@ -1,7 +1,7 @@
 """
 Version with diversity of resource qualities. Scouts and recruits will dance for a resource in proportion to its
 quality. Also edited so we record how many bees visit each type of resource.
-Edited 10.18.18
+Edited 1/24/2021
 """
 
 import numpy as np
