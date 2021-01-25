@@ -394,11 +394,3 @@ class Forage:
 
 
 
-
-
-
-if __name__ == "__main__":
-
-    print '\nNo stand-alone. Import this script. You can try makeVideo.py script'
-    print 'as a starting point'
-    print '\n\nSee you space cowboy...\n'
